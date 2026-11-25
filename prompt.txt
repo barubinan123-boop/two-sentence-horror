@@ -1,0 +1,26 @@
+Kamu adalah BUILDER (build-only) untuk satu bounty make.fun. Baca file ini sampai habis SEBELUM menulis apa pun:
+- ~/workspace/custom-skills/make_fun_bounty_submission/SKILL.md (terutama bagian Quality bar dan What wins 1st place)
+- ~/workspace/makefun-bounty/two-sentence-horror/u-suroto-two-sentence-horror-acea9253-kit/RULES.txt (baca sampai habis, termasuk judge brief)
+
+BOUNTY: "Two-Sentence Horror", slug u-suroto-two-sentence-horror-acea9253, hadiah $2 winner-takes-all, entries tutup 2026-11-27T08:00:00Z (27 Nov 15:00 WIB), hasil 2026-12-19T12:00:00Z. Tugas: tulis cerita horor PALING menakutkan dalam TEPAT dua kalimat, maksimal 400 karakter. Program entry (main.ts di root repo) menulis satu teks ke /output/entry.txt. Gate: file harus UTF-8, 1-400 karakter, bukan hanya spasi, tepat dua kalimat.
+
+JUDGE BRIEF (kriteria, urutan penting): (1) cerita horor dua kalimat yang sungguh menakutkan; (2) kalimat kedua membalik/mengungkap sesuatu yang membuat kalimat pertama lebih buruk saat dibaca ulang; (3) horor tersirat, bukan dijelaskan — biarkan pembaca mengisi yang terburuk; (4) prosa presisi dan konkret, tiap kata pantas; (5) orisinal, bukan twist horor yang sudah umum. Menahan diri lebih penting daripada shock; gore demi gore tidak dihitung.
+
+QUALITY BAR + POLA JUARA 1 (wajib): Tulis MINIMAL 5 kandidat cerita horor dua kalimat di sesi ini (di file CANDIDATES.md di repo, atau sebagai pesan write — yang penting tertulis di sesi ini), lalu nilai sendiri tiap kandidat terhadap 5 kriteria juri di atas dan submit hanya yang TERBAIK. Pola pemenang: ADEGAN konkret — orang bernama, benda konkret, satu detail mengejutkan, akhiri dengan citra yang diam; hindari klise yang pasti ditulis ribuan agen lain (jangan pakai twist "ternyata aku sudah mati", "cermin", "boneka", "telepon dari dalam rumah" yang generik; cari sudut yang segar dan spesifik). Cerita terbaik harus punya kalimat kedua yang membuat kalimat pertama terasa jauh lebih mengerikan saat dibaca ulang, dengan horor yang tersirat.
+
+KERJA:
+- Folder kerja: ~/workspace/makefun-bounty/two-sentence-horror/ (kit sudah diunduh di subfolder u-suroto-two-sentence-horror-acea9253-kit/). Repo GitHub baru: barubinan123-boop/two-sentence-horror (public, buat dengan gh CLI — gh sudah login sebagai barubinan123-boop; kompetisi dibuka 2026-11-24, jadi repo baru sekarang sudah sah).
+- Tulis file DI SESI INI minimal 2 pesan write/edit (main.ts WAJIB ditulis olehmu di sesi ini, bukan disalin). JANGAN salin starter kit (kit ini tidak punya starter main.ts — tulis sendiri dari RULES). JANGAN baca implementasi entri lama.
+- main.ts (TypeScript, Node 22): saat dijalankan dengan `node main.ts`, menulis cerita terpilih ke /output/entry.txt (buat folder /output bila belum ada). Program harus deterministik: selalu menulis cerita yang sama persis.
+- README.md wajib memakai template ini (isi placeholder): judul "# two-sentence-horror", lalu 3 badge live ini persis:
+[![make.fun · u-suroto-two-sentence-horror-acea9253](https://make.fun/badge/u-suroto-two-sentence-horror-acea9253.svg)](https://make.fun/bounty/u-suroto-two-sentence-horror-acea9253?utm_source=github&utm_medium=readme&utm_campaign=u-suroto-two-sentence-horror-acea9253)
+[![rank](https://make.fun/badge/u-suroto-two-sentence-horror-acea9253/barubinan123-boop/two-sentence-horror/rank.svg)](https://make.fun/bounty/u-suroto-two-sentence-horror-acea9253/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-suroto-two-sentence-horror-acea9253)
+[![reward](https://make.fun/badge/u-suroto-two-sentence-horror-acea9253/barubinan123-boop/two-sentence-horror/reward.svg)](https://make.fun/bounty/u-suroto-two-sentence-horror-acea9253?utm_source=github&utm_medium=readme&utm_campaign=u-suroto-two-sentence-horror-acea9253)
+lalu deskripsi singkat entri, bagian "## Run it" dengan ```sh node main.ts ```, dan footer: <sub>Entered on [make.fun](https://make.fun/?ref=s0awek38&utm_source=github&utm_medium=readme&utm_campaign=u-suroto-two-sentence-horror-acea9253) · AI agents build software for cash rewards</sub>
+- LICENSE: MIT lengkap + baris "SPDX-License-Identifier: MIT".
+- Set repo About SETELAH push: gh repo edit barubinan123-boop/two-sentence-horror --description 'Two-sentence horror story. Built by an AI agent for make.fun'"'"'s “Two-Sentence Horror” bounty, $2 in USDC.' --homepage 'https://make.fun/bounty/u-suroto-two-sentence-horror-acea9253' --add-topic 'makefun,ai-agents,bounties,growth'
+- Verifikasi lokal: jalankan `node main.ts`, baca /output/entry.txt, pastikan: tepat 2 kalimat, ≤400 karakter, UTF-8, bukan spasi saja. Perbaiki bila gagal.
+- Simpan brief ini kata-per-kata ke ~/workspace/makefun-bounty/two-sentence-horror/prompt.txt (tulis file prompt.txt berisi SELURUH teks brief ini persis).
+- Akun make.fun @hsnmbrk07 SUDAH terhubung — JANGAN makefun login, JANGAN register. JANGAN PERNAH print/cat/log API key (~/.makefun/credentials) atau keypair (~/workspace/makefun-bounty/makefun-keypair.json).
+- JANGAN bundle, JANGAN check, JANGAN submit — itu tugas agen utama. JANGAN commit file kit.tar.gz atau folder kit ke repo.
+- Laporkan kembali: URL repo, SHA commit lengkap (40 karakter), cerita yang dipilih + jumlah karakternya, dan ringkasan 5 kandidat + alasan pilihanmu.
